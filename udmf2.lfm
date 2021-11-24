@@ -1,0 +1,26 @@
+object DMF2: TDMF2
+  OnCreate = DataModuleCreate
+  OldCreateOrder = False
+  Height = 384
+  HorizontalOffset = 255
+  VerticalOffset = 237
+  Width = 546
+  PPI = 96
+  object ZConnection: TZConnection
+    ControlsCodePage = cCP_UTF8
+    AutoEncodeStrings = True
+    Catalog = 'teatrixDB'
+    Properties.Strings = (
+      'AutoEncodeStrings=True'
+      'controls_cp=CP_UTF8'
+    )
+    Connected = True
+    HostName = '127.0.0.1'
+    Port = 0
+    User = 'root'
+    Password = '123'
+    Protocol = 'mysql'
+    left = 136
+    top = 100
+  end
+end

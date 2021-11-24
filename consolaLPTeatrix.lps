@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <Version Value="11"/>
+    <BuildModes Active="Default"/>
+    <Units Count="6">
+      <Unit0>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="92"/>
+        <CursorPos X="48" Y="100"/>
+        <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+      </Unit0>
+      <Unit1>
+        <Filename Value="udmf2.pas"/>
+        <ComponentName Value="DMF2"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="DataModule"/>
+        <UnitName Value="uDMF2"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="136"/>
+        <CursorPos X="6" Y="145"/>
+        <UsageCount Value="13"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
+      </Unit1>
+      <Unit2>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/zeosdbo/src/component/ZDataset.pas"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="66"/>
+        <CursorPos X="6" Y="82"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit2>
+      <Unit3>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/zeosdbo/src/component/ZAbstractDataset.pas"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="145"/>
+        <CursorPos X="3" Y="86"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit3>
+      <Unit4>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/packages/fcl-db/src/base/db.pas"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="1643"/>
+        <CursorPos X="17" Y="1657"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit4>
+      <Unit5>
+        <Filename Value="/usr/share/fpcsrc/3.0.4/packages/fcl-db/src/base/dataset.inc"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="2054"/>
+        <CursorPos X="91" Y="2060"/>
+        <UsageCount Value="12"/>
+        <Loaded Value="True"/>
+      </Unit5>
+    </Units>
+    <JumpHistory Count="30" HistoryIndex="29">
+      <Position1>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="38" Column="5" TopLine="22"/>
+      </Position1>
+      <Position2>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="468" Column="17" TopLine="444"/>
+      </Position2>
+      <Position3>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="36" Column="21" TopLine="22"/>
+      </Position3>
+      <Position4>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="38" Column="21" TopLine="14"/>
+      </Position4>
+      <Position5>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="458" TopLine="444"/>
+      </Position5>
+      <Position6>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="40" Column="21" TopLine="25"/>
+      </Position6>
+      <Position7>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/zeosdbo/src/component/ZDataset.pas"/>
+        <Caret Line="82" Column="3" TopLine="66"/>
+      </Position7>
+      <Position8>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="465" Column="17" TopLine="441"/>
+      </Position8>
+      <Position9>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="39" Column="9" TopLine="24"/>
+      </Position9>
+      <Position10>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="40" Column="9" TopLine="24"/>
+      </Position10>
+      <Position11>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="461" Column="18" TopLine="447"/>
+      </Position11>
+      <Position12>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="40" TopLine="24"/>
+      </Position12>
+      <Position13>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="42" Column="18" TopLine="40"/>
+      </Position13>
+      <Position14>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="466" Column="5" TopLine="457"/>
+      </Position14>
+      <Position15>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="465" Column="5" TopLine="457"/>
+      </Position15>
+      <Position16>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="460" Column="20" TopLine="448"/>
+      </Position16>
+      <Position17>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="42" Column="14" TopLine="26"/>
+      </Position17>
+      <Position18>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="36" Column="14" TopLine="20"/>
+      </Position18>
+      <Position19>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="462" TopLine="446"/>
+      </Position19>
+      <Position20>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="463" TopLine="446"/>
+      </Position20>
+      <Position21>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="464" TopLine="446"/>
+      </Position21>
+      <Position22>
+        <Filename Value="../../.lazarus/onlinepackagemanager/packages/zeosdbo/src/component/ZDataset.pas"/>
+        <Caret Line="82" Column="6" TopLine="66"/>
+      </Position22>
+      <Position23>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <Caret Line="157" Column="4" TopLine="138"/>
+      </Position23>
+      <Position24>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="41" Column="19" TopLine="13"/>
+      </Position24>
+      <Position25>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="463" TopLine="457"/>
+      </Position25>
+      <Position26>
+        <Filename Value="udmf2.pas"/>
+        <Caret Line="460" TopLine="457"/>
+      </Position26>
+      <Position27>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <Caret Line="155" TopLine="40"/>
+      </Position27>
+      <Position28>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <Caret Line="23" Column="14" TopLine="7"/>
+      </Position28>
+      <Position29>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <Caret Line="62" Column="17" TopLine="51"/>
+      </Position29>
+      <Position30>
+        <Filename Value="consolaLPTeatrix.lpr"/>
+        <Caret Line="64" Column="20" TopLine="51"/>
+      </Position30>
+    </JumpHistory>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes Count="0" ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+  <Debugging>
+    <BreakPoints Count="1">
+      <Item1>
+        <Kind Value="bpkSource"/>
+        <WatchScope Value="wpsLocal"/>
+        <WatchKind Value="wpkWrite"/>
+        <Source Value="udmf2.pas"/>
+        <Line Value="359"/>
+      </Item1>
+    </BreakPoints>
+  </Debugging>
+</CONFIG>
