@@ -342,7 +342,7 @@ procedure Tarch.completoTConsumoObraPais(idVerizon, Pais: String;
   Milisegundos: Integer; fecha: TDate);
 begin
 
-  DMF2.sqlRun(' INSERT INTO tConsumoObraPais(fecha,idVerizon,Pais,Milisegundos) '+
+  DMF2.sqlRun(' INSERT INTO tConsumoObraPais2(fecha,idVerizon,Pais,Milisegundos) '+
      'VALUES('+QuotedStr(FormatDateTime('YYYY-MM-DD',fecha))+','+QuotedStr(idVerizon)+','+QuotedStr(Pais)+','+IntToStr(Milisegundos)+') ON DUPLICATE KEY UPDATE '+
      ' Milisegundos = Milisegundos + VALUES(Milisegundos) ').free;
 end;
