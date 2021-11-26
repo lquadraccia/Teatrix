@@ -4,7 +4,7 @@ CREATE TABLE `tAgent` (
   `tipo` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`ID`),
   KEY `nombre` (`nombre`)
-) ENGINE=InnoDB AUTO_INCREMENT=3799 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `tAssets` (
@@ -59,7 +59,7 @@ CREATE TABLE `tPlays` (
   `tamDistribucion` int(11) DEFAULT '0',
   PRIMARY KEY (`id`),
   KEY `idxSessionVerizon` (`idSession`,`idVerizon`)
-) ENGINE=InnoDB AUTO_INCREMENT=77581 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=0 DEFAULT CHARSET=latin1;
 
 
 CREATE TABLE `tPlaysDistribucion` (
