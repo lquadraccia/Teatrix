@@ -14,11 +14,9 @@ object DMF2: TDMF2
       'AutoEncodeStrings=True'
       'controls_cp=CP_UTF8'
     )
-    Connected = True
     HostName = '127.0.0.1'
     Port = 0
     User = 'root'
-    Password = '123'
     Protocol = 'mysql'
     left = 136
     top = 100
