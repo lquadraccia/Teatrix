@@ -150,9 +150,6 @@ begin
   try
   try
 
-      if q1.IsEmpty then
-         Raise Exception.Create('error de interpretación');;
-
       fecha:= EncodeDate(StrToInt(copy(slice_Fecha,1,4)),
                              StrToInt(copy(slice_Fecha,6,2)),
                              StrToInt(copy(slice_Fecha,9,2)));
@@ -161,7 +158,19 @@ begin
                             StrToInt(copy(slice_Hora,4,2)),
                             StrToInt(copy(slice_Hora,7,2)),0);
 
+
       h := StrToInt(copy(slice_Hora,1,2));
+
+
+      usuarioPais(fecha,slice_EUID,pais,slice_EUID);
+
+      completotConsumoHoraPais(fecha,h,pais,1,Trunc(StrToFloat(slice_duracion)*1000));
+      completoTConsumoObraPais(Slice_AssetID,pais,Trunc(StrToFloat(slice_duracion)*1000),fecha);
+
+      if q1.IsEmpty then begin
+         Raise Exception.Create('error de interpretación');;
+      end;
+
 
       tid := q1.FieldByName('id').AsInteger;
       tidPais := q1.FieldByName('idPais').AsString;
@@ -202,9 +211,6 @@ begin
          Raise Exception.Create('error de cálculo de duración');
 
 
-      usuarioPais(fecha,slice_EUID,pais,slice_EUID);
-
-
       if tidUsuario<>StrToInt(slice_EUID) then
          Raise Exception.Create('error de usuario');
 
@@ -225,9 +231,6 @@ begin
 
          tdistribucion[pos] := c;
 
-
-         completotConsumoHoraPais(fecha,h,tidPais,1,Trunc(StrToFloat(slice_duracion)*1000));
-         completoTConsumoObraPais(tidVerizon,tidPais,Trunc(StrToFloat(slice_duracion)*1000),fecha);
       end else begin
          tretransmits := tretransmits + 1;
 
