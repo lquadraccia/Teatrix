@@ -233,7 +233,6 @@ begin
 
       end else begin
          tretransmits := tretransmits + 1;
-
       end;
 
       tdistribucion := StrToHexStr(tdistribucion);
@@ -336,15 +335,17 @@ var
  q1:TZQuery;
 begin
   Result := 0;
-  q1 := DMF2.sqlRun('SELECT duracion,tipo FROM tAssets where idVerizon ='+QuotedStr(AssetID));
-  Result := q1.FieldByName('duracion').AsInteger;
-  q1.free;
+  q1 := DMF2.sqlRun('SELECT duracion,tipo FROM tAssets where activo=1 and idVerizon ='+QuotedStr(AssetID));
+  try
+    Result := q1.FieldByName('duracion').AsInteger;
+  finally
+    q1.free;
+  end;
 end;
 
 procedure Tarch.completoTConsumoObraPais(idVerizon, Pais: String;
   Milisegundos: Integer; fecha: TDate);
 begin
-
   DMF2.sqlRun(' INSERT INTO tConsumoObraPais2(fecha,idVerizon,Pais,Milisegundos) '+
      'VALUES('+QuotedStr(FormatDateTime('YYYY-MM-DD',fecha))+','+QuotedStr(idVerizon)+','+QuotedStr(Pais)+','+IntToStr(Milisegundos)+') ON DUPLICATE KEY UPDATE '+
      ' Milisegundos = Milisegundos + VALUES(Milisegundos) ').free;
@@ -384,28 +385,30 @@ begin
   q1 := DMF2.sqlRun('SELECT * FROM tPlays where idSession ='+QuotedStr(Plays_SessionID)+
   ' and idVerizon='+QuotedStr(Plays_AssetID));
   try
-  if not q1.IsEmpty then Exit;
+  try
+    if not q1.IsEmpty then
+       Raise Exception.Create('tPlays duplicado');
 
-  fechaHora:= EncodeDate(StrToInt(copy(Plays_Feha,1,4)),
+    fechaHora:= EncodeDate(StrToInt(copy(Plays_Feha,1,4)),
                          StrToInt(copy(Plays_Feha,6,2)),
                          StrToInt(copy(Plays_Feha,9,2)));
 
 
-  usuarioPais(fechaHora,Plays_EUID,idPais,Plays_EUID);
+    usuarioPais(fechaHora,Plays_EUID,idPais,Plays_EUID);
 
 
-  fechaHora:=fechaHora +
+    fechaHora:=fechaHora +
              EncodeTime(StrToInt(copy(Plays_Hora,1,2)),
                         StrToInt(copy(Plays_Hora,4,2)),
                         StrToInt(copy(Plays_Hora,7,2)),0);
 
-  distribucion := '';
-  for d:=1 to (ceil(AssetsDuracion/4.096/8)+1) do
-    distribucion := distribucion + AnsiChar(0);
+    distribucion := '';
+    for d:=1 to (ceil(AssetsDuracion/4.096/8)+1) do
+      distribucion := distribucion + AnsiChar(0);
 
 
-  tamDistribucion := Length(distribucion);
-  distribucion := StrToHexStr(distribucion);
+    tamDistribucion := Length(distribucion);
+    distribucion := StrToHexStr(distribucion);
 
 
     DMF2.sqlRun('INSERT INTO tPlays(idSession,Inicio,idUsuario,idPais,idVerizon,ip,IdAgente,retransmits,'+
@@ -428,8 +431,16 @@ begin
       IntToStr(id)+','+
       QuotedStr(distribucion)+')').free;
 
+  except
+    on e:Exception do
+    begin
+      grabarEnArchivoLog('tPlays:'+nombreArc+' Fila:'+IntToStr(fila)+' - Error:'+e.Message);
+    end;
+  end;
+
+
   finally
-      q1.free;
+    q1.free;
   end;
 
 end;
@@ -452,6 +463,7 @@ begin
    inifile.free;
  end;
 end;
+
 
 
 function TDMF2.sqlRun(sql: string): TZQuery;
